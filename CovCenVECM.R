@@ -3,9 +3,9 @@ library(tidyverse)
 library(aTSA)
 library(tsDyn) ## imports vars and urca
 
-p04_data <- read_csv("/Users/pturk02/Dropbox/Atrium/Projects/Covid19/Thao_Projects/Paper/Data_Code/GTrends.csv")
-hosp01 <- read_csv("/Users/pturk02/Dropbox/Atrium/Projects/Covid19/Thao_Projects/Paper/Data_Code/Hospital.csv")
-HBot <- read_csv("/Users/pturk02/Dropbox/Atrium/Projects/Covid19/Thao_Projects/Paper/Data_Code/HBot.csv")
+p04_data <- read_csv("GTrends.csv")
+hosp01 <- read_csv("Hospital.csv")
+HBot <- read_csv("HBot.csv")
 
 master_data <- full_join(p04_data, HBot)
 master_data <- full_join(master_data, hosp01)
