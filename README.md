@@ -14,4 +14,4 @@ Contains data and R code for:
 	journal = {medRxiv}
 }
 
-https://www.medrxiv.org/content/10.1101/2020.11.15.20231845v1
+The paper can be accessed here: https://www.medrxiv.org/content/10.1101/2020.11.15.20231845v1
