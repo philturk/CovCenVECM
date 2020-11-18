@@ -1,4 +1,4 @@
-# CovCenVECM
+# CovCenVECM repo for "A Predictive Internet-Based Model for COVID-19 Hospitalization Census"
 
 Contains data and R code for:
 
