@@ -95,11 +95,6 @@ lttest(H1, r = 2) ## Do not include linear trend
 ## Testing (Health Bot not shown for brevity)
 beta_01 <- 0.319786070 + dat[,1] - 0.77046287*dat[,2] - 0.01559538*dat[,3] 
 plot(beta_01, type = "l")
-B_diff <- beta_01 - lag(beta_01, 1) 
-Time <- (1:108) - 1 - 0.5*108
-B_lag1 <- lag(beta_01, 1)
-B_diff1 <- lag(B_diff, n = 1)
-B_diff2 <- lag(B_diff, n = 2)
 B_diff3 <- lag(B_diff, n = 3) 
 summary(lm(B_diff ~ Time + B_lag1 + B_diff1 + B_diff2 + B_diff3))
 summary(lm(B_diff ~ Time + B_lag1 + B_diff1 + B_diff2)) 
