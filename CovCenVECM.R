@@ -95,12 +95,13 @@ lttest(H1, r = 2) ## Do not include linear trend
 ## Testing (Health Bot not shown for brevity)
 beta_01 <- 0.319786070 + dat[,1] - 0.77046287*dat[,2] - 0.01559538*dat[,3] 
 plot(beta_01, type = "l")
-B_diff3 <- lag(B_diff, n = 3) 
-summary(lm(B_diff ~ Time + B_lag1 + B_diff1 + B_diff2 + B_diff3))
-summary(lm(B_diff ~ Time + B_lag1 + B_diff1 + B_diff2)) 
-summary(lm(B_diff ~ Time + B_lag1 + B_diff1))
-summary(lm(B_diff ~ Time + B_lag1)) ## Choose k = 0
-adf.test(beta_01, nlag = 1) ## Suggests beta_01 is I(0)
+trunc(12*(length(beta_01)/100)^(1/4)) ## 12 chosen as upper bound
+tryit01 <- ur.df(beta_01, type = "trend", lags = 12, selectlags = "BIC")  
+summary(tryit01) ## 2 lags using Holm correction method
+tryit02 <- ur.df(beta_01, type = "trend", lags = 2)
+summary(tryit02) ## tau_3 and Phi_3 marginally significant
+tryit03 <- ur.df(beta_01, type = "drift", lags = 2)
+summary(tryit03) ## tau_2 significant 
 
 ## Put constant inside the co-integration component
 vecm2 <- VECM(dat, lag = 1, estim = "ML", r = 2) ## Include = "const" is default
