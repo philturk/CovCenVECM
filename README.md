@@ -2,16 +2,15 @@
 
 Contains data and R code for:
 
-@article {Turk2020.11.15.20231845,
-	author = {Turk, Philip J and Tran, Thao P and Rose, Geoff A and McWilliams, Andrew D},
-	title = {A Predictive Internet-Based Model for COVID-19 Hospitalization Census},
-	elocation-id = {2020.11.15.20231845},
-	year = {2020},
-	doi = {10.1101/2020.11.15.20231845},
-	publisher = {Cold Spring Harbor Laboratory Press},
-	URL = {https://www.medrxiv.org/content/early/2020/11/18/2020.11.15.20231845},
-	eprint = {https://www.medrxiv.org/content/early/2020/11/18/2020.11.15.20231845.full.pdf},
-	journal = {medRxiv}
+@article{turk2021predictive,
+  title={A predictive internet-based model for COVID-19 hospitalization census},
+  author={Turk, Philip J and Tran, Thao P and Rose, Geoffrey A and McWilliams, Andrew},
+  journal={Scientific Reports},
+  volume={11},
+  number={1},
+  pages={1--12},
+  year={2021},
+  publisher={Nature Publishing Group}
 }
 
-The paper can be accessed here: https://www.medrxiv.org/content/10.1101/2020.11.15.20231845v1
+The paper can be accessed here: https://www.nature.com/articles/s41598-021-84091-2
